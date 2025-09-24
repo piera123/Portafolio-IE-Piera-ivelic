@@ -1,0 +1,161 @@
+/* Colores principales */
+:root {
+  --negro: #000000;
+  --blanco: #ffffff;
+  --burdeos: #800020; /* NUEVO COLOR PRINCIPAL */
+  --celeste: #64b5f6;
+}
+
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Fondo animado */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--burdeos);
+  background: linear-gradient(-45deg, #fdf6ec, #f5e1c8, #e0c3a4, #d7b899);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Animación del fondo */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Canvas de partículas en el fondo */
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #fdf6ec;
+}
+
+/* Estilo del header */
+header {
+  color: var(--burdeos);
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Subfondo con semitransparencia para mejorar la legibilidad */
+.intro {
+  max-width: 800px;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para los botones */
+.botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.fila-encargos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.fila {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+/* Botones de encargos circulares */
+.boton-encargo {
+  background-color: var(--burdeos);
+  color: white;
+  border: none;
+  padding: 30px; /* Aumenta el padding para hacer los botones más grandes */
+  border-radius: 50%; /* Mantener los botones circulares */
+  cursor: pointer;
+  font-size: 22px; /* Aumenta el tamaño de la fuente para mayor visibilidad */
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  width: 120px; /* Aumentar el tamaño del círculo */
+  height: 120px; /* Aumentar el tamaño del círculo */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-encargo:hover {
+  background-color: #a8324a; /* burdeos más claro */
+  transform: scale(1.1); /* Aumentar un poco más al pasar el ratón */
+}
+
+/* Estilo para los botones rectangulares (Wiki y Sobre el autor) */
+.boton {
+  background-color: var(--burdeos);
+  color: white;
+  border: none;
+  padding: 25px 50px; /* Aumentar el padding para que los botones sean más grandes */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
+  font-size: 22px; /* Aumentar el tamaño de la fuente para mayor visibilidad */
+  transition: 0.3s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  min-width: 250px; /* Ancho fijo mayor */
+  text-align: center;
+}
+
+.boton:hover {
+  background-color: #a8324a; /* burdeos más claro */
+  transform: scale(1.05);
+}
+
+
+footer {
+  margin-top: 50px;
+  font-size: 14px;
+  color: #b9738f; /* tono burdeos claro */
+}
+
+/* Ocultar el texto por defecto */
+.hidden {
+  display: none;
+}
+
+/* Estilos para el texto desplegable */
+#aboutText {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #800020; /* burdeos */
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
